@@ -1,0 +1,15 @@
+version: '3'
+services:
+  fluffy:
+    build: .
+    ports:
+      - "7000:8000"
+    container_name: fluffy
+    restart: unless-stopped
+    environment:
+      ENV PYTHONUNBUFFERED: "TRUE"
+      FLUFFY_SETTINGS: "/opt/fluffy/settings/waf.py"
+    expose:
+      - "8000"
+    volumes:
+      - ".:/opt/fluffy:rw"

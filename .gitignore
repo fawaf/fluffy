@@ -19,3 +19,9 @@
 /settings.py
 /tmp
 /venv
+!settings/dev_files.py
+!settings/dev_s3.py
+!settings/prod_s3.py
+!settings/test_files.py
+settings/
+docker-compose.yml
